@@ -237,13 +237,27 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.04);
+  background: var(--brand);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,42,42,0.14);
   color: white;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  box-shadow: 0 10px 30px rgba(255,42,42,0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(255,42,42,0.18);
+}
+
+.carousel-btn:disabled,
+.carousel-btn.disabled {
+  opacity: 0.48;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
 }
 
 .carousel-controls.left { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); z-index: 30; }
