@@ -2,7 +2,7 @@ renderSection('navbar-container', `
 <!-- Navbar -->
 <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
   <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-    <a href="#" class="text-white text-2xl font-black tracking-tight whitespace-nowrap">Your Name</a>
+    <a href="#" class="text-white text-2xl font-black tracking-tight whitespace-nowrap">Satya Revanth</a>
     <div class="hidden md:flex space-x-8">
       <a href="#home" class="nav-link text-white/80 hover:text-white font-medium relative group transition-colors">Home<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff2a2a] transition-all duration-300 group-hover:w-full"></span></a>
       <a href="#about" class="nav-link text-white/80 hover:text-white font-medium relative group transition-colors">About<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff2a2a] transition-all duration-300 group-hover:w-full"></span></a>
