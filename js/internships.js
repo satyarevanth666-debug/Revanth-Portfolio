@@ -1,7 +1,6 @@
 const achievements = [
-  { badge: 'Hackathon', title: '1st Prize', subtitle: 'Hackathon Win #1', tags: ['AWS', 'Web Development'] },
-  { badge: 'Hackathon', title: '2nd Runner Up', subtitle: 'Hackathon Win #2', tags: ['Solidity', 'React', 'Ethereum'] },
-  { badge: 'CTF', title: '2nd Prize in Documentation', subtitle: 'CTF Award', tags: ['Cybersecurity'] }
+  { badge: 'Hackathon', title: 'Participant', subtitle: 'Hackathon Participant', tags: ['React', 'Node.js', 'MongoDB'] },
+  { badge: 'MUN * Quiz', title: '2nd Runner Up', subtitle: 'MUN * Quiz Win', tags: ['Public Speaking', 'Debate'] }
 ];
 
 const achievementsMarkup = renderList(achievements, ({ badge, title, subtitle, tags }) => `

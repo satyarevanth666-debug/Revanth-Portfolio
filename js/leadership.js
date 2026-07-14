@@ -1,6 +1,5 @@
 const leadershipItems = [
-  { title: 'Blockchain Club Lead', place: 'Your University', text: 'Organized workshops on Solidity, ethers.js, and DeFi fundamentals.' },
-  { title: 'Hackathon Organizer', place: 'CS Society', text: 'Led logistics and mentorship for a 200+ participant hackathon.' }
+  { title: 'Class Representative', place: 'SRM University AP', text: 'Oversaw academic and extracurricular activities for my batch.' }
 ];
 
 const leadershipMarkup = renderList(leadershipItems, ({ title, place, text }) => `
