@@ -213,6 +213,12 @@ body {
 .carousel-viewport { cursor: grab; }
 .carousel-viewport:active { cursor: grabbing; }
 
+/* Certificates modal styling */
+.cert-modal { display: none; }
+.cert-modal:not(.hidden) { display: flex; }
+.cert-modal-content img { max-height: 80vh; }
+.cert-modal-close { cursor: pointer; }
+
 .carousel-track {
   display: flex;
   align-items: stretch;
