@@ -18,7 +18,7 @@ document.getElementById('footer-container').innerHTML = `
   </div>
   <div class="w-full text-center overflow-hidden">
     <h2 class="text-[18vw] md:text-[16vw] leading-none font-sans font-black tracking-tighter lowercase text-[#f4f4f4] select-none">
-      your name
+      Revanth
     </h2>
   </div>
   <div class="grid md:grid-cols-3 gap-12 items-end">
