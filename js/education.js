@@ -1,7 +1,7 @@
 const educationItems = [
-  { title: 'B.Tech Computer Science Engineering', school: 'Your University', detail: 'Focus on systems, cryptography, and full-stack engineering.', range: '2024 — 2028' },
-  { title: 'Class XII (PCM + CS)', school: 'Your School', detail: 'Scored 81% with distinction in Computer Science.', range: '2022 — 2024' },
-  { title: 'Class X', school: 'Your School', detail: 'Scored 81% overall.', range: '2020 — 2022' }
+  { title: 'B.Tech Computer Science Engineering', school: 'SRM University AP', detail: 'B-Tech CSE — SRM University AP', range: '2025 — 2029' },
+  { title: 'Class XII (MPC)', school: 'Sri Chaitanya Junior College', detail: 'Scored 98.4%.', range: '2023 — 2025' },
+  { title: 'Class X', school: 'Sri Chaitanya High School', detail: 'Scored 96.83% overall.', range: '2022 — 2023' }
 ];
 
 const educationMarkup = renderList(educationItems, ({ title, school, detail, range }) => `
