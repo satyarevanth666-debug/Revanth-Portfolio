@@ -1,8 +1,7 @@
 const journeyItems = [
-  { year: '2024', title: 'Started B.Tech CSE', text: 'Began my Computer Science journey with a focus on systems and web.' },
-  { year: '2025', title: 'Discovered Blockchain', text: 'Fell into Ethereum, Solidity, and smart contract development.' },
-  { year: '2025', title: 'First Hackathon Win', text: 'Placed at a national hackathon building a decentralized dApp.' },
-  { year: '2026', title: 'Building & Shipping', text: 'Actively shipping open-source dApps and writing technical content.' }
+  { year: '2025', title: 'Started B.Tech CSE', text: 'Began my Computer Science journey with a focus on systems and web.' },
+  { year: '2025', title: 'Participated in 5 Hackathons', text: 'Fell into the world of hackathons and built several innovative projects.' },
+  { year: '2026', title: 'ShadowFox Intern - FrontEnd Intern', text: 'Gained hands-on experience in a real-world development environment.' },
 ];
 
 const journeyMarkup = renderList(journeyItems, ({ year, title, text }) => `
