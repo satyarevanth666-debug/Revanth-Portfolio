@@ -1,7 +1,7 @@
 const educationItems = [
-  { title: 'B.Tech Computer Science Engineering', school: 'SRM University AP', detail: 'B-Tech CSE — SRM University AP', range: '2025 — 2029' },
-  { title: 'Class XII (MPC)', school: 'Sri Chaitanya Junior College', detail: 'Scored 98.4%.', range: '2023 — 2025', score: '98.4%' },
-  { title: 'Class X', school: 'Sri Chaitanya High School', detail: 'Scored 96.83% overall.', range: '2022 — 2023', score: '96.83%' }
+  { title: 'B.Tech Computer Science Engineering', school: 'SRM University AP', detail: 'B-Tech CSE — SRM University AP', range: '2025 — 2029', score: 'CGPA: 9.74/10' },
+  { title: 'Class XII (MPC)', school: 'Sri Chaitanya Junior College', detail: 'Scored 98.4%.', range: '2023 — 2025', score: 'Percentage: 98.4%' },
+  { title: 'Class X', school: 'Sri Chaitanya High School', detail: 'Scored 96.83% overall.', range: '2022 — 2023', score: 'Percentage: 96.83%' }
 ];
 
 const educationMarkup = renderList(educationItems, ({ title, school, detail, range, score }) => `
