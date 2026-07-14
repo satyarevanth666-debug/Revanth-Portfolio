@@ -5,7 +5,7 @@ const projects = [
     title: 'NewsOrbit - Global News Dashboard',
     description: 'NewsOrbit is a modern AI-powered news platform that delivers real-time headlines from around the world in one place. It features country-wise news coverage, trending stories, and intelligent AI-generated summaries for faster reading. Users can quickly explore the latest updates across multiple categories without information overload. NewsOrbit makes staying informed faster, smarter, and more engaging with real-time global news.',
     image: 'images/projects/project-1.svg',
-    tags: ['HTML', 'CSS', 'JavaScript', 'News API', 'MongoDB'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'MongoDB'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/40',
     actions: [
       { label: 'Code', href: 'https://github.com/satyarevanth666-debug/NewsOrbit-', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' },
