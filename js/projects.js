@@ -7,30 +7,62 @@ const projects = [
     image: 'images/projects/project-1.svg',
     tags: ['HTML', 'CSS', 'JavaScript', 'News API', 'MongoDB'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/40',
-    actions: [{ label: 'Code', href: 'https://github.com', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' }]
+    actions: [
+      { label: 'Code', href: 'https://github.com/satyarevanth666-debug/NewsOrbit-', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' },
+      { label: 'Live Demo →', href: 'https://news-orbit-frontend.vercel.app/', className: 'inline-flex items-center gap-2 rounded-full bg-[#ff2a2a] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#ff4a4a]' }
+    ]
   },
   {
     number: '02',
-    badge: '🔧 In Progress',
-    title: 'Project Two',
-    description: 'A description of your second project — the problem, approach, and outcome.',
+    badge: '🚀 Featured Project',
+    title: 'Habit Tracker',
+    description: 'Habit Tracker is a modern web application designed to help users to maintain productive daily habits.Users can create, update, and track multiple habits from a simple and intuitive dashboard.The application provides streak tracking and progress insights to maintain consistency.Its responsive design ensures a smooth experience across all devices.By visualizing daily achievements, it helps users stay motivated and achieve personal goals.',
     image: 'images/projects/project-2.svg',
-    tags: ['Python', 'TensorFlow', 'Computer Vision', 'LLMs'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'React + Vite'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
     actions: [
-      { label: 'Code', href: 'https://github.com', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' },
-      { label: 'Live Demo →', href: 'https://demo.com', className: 'inline-flex items-center gap-2 rounded-full bg-[#ff2a2a] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#ff4a4a]' }
+      { label: 'Code', href: 'https://github.com/satyarevanth666-debug/Habit-Tracker', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' },
+      { label: 'Live Demo →', href: 'https://habit-flow-habit-tracker-and-streak-nine.vercel.app/', className: 'inline-flex items-center gap-2 rounded-full bg-[#ff2a2a] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#ff4a4a]' }
     ]
   },
   {
     number: '03',
-    badge: '🔧 In Progress',
-    title: 'Project Three',
-    description: 'A description of your third project. Keep it concise and impact-focused.',
+    badge: '🚀 Featured Project',
+    title: 'Minesweeper Master',
+    description: 'Minesweeper Master is an interactive puzzle game that challenges players to uncover all safe tiles while avoiding hidden mines. It features multiple difficulty levels, statistics, a leaderboard, and a timer to track performance. Players use thinking to identify mine locations and clear the board safely. The game includes progress tracking for user experience and ensures smooth gameplay across both desktop and mobile devices with a responsive design.',
     image: 'images/projects/project-3.svg',
-    tags: ['Solidity', 'Ethereum', 'ethers.js', 'JavaScript'],
+    tags: ['HTML', 'CSS', 'JavaScript'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
-    actions: [{ label: 'Code', href: 'https://github.com', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' }]
+    actions: [
+      { label: 'Code', href: 'https://github.com/satyarevanth666-debug/Minesweeper-Game', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' },
+      { label: 'Live Demo →', href: 'https://minesweeper-game-omega-kohl.vercel.app/', className: 'inline-flex items-center gap-2 rounded-full bg-[#ff2a2a] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#ff4a4a]' }
+    ]
+  },
+  {
+    number: '04',
+    badge: 'Simple Project',
+    title: 'CalciWorld - World of Calculators',
+    description: 'CalciWorld is an all-in-one calculator website featuring 70+ calculators in one platform. It includes a wide range of tools for mathematics, finance, health, science, and unit conversions. The website provides quick, accurate, and reliable results with a clean and user-friendly interface. It is designed to help students, professionals, and everyday users solve problems easily. CalciWorld serves as a complete hub for all types of calculation needs.',
+    image: 'images/projects/project-4.svg',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
+    actions: [
+      { label: 'Code', href: 'https://github.com/satyarevanth666-debug/CalciWorld---World-of-Calculators', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' },
+      { label: 'Live Demo →', href: 'https://calci-world-world-of-calculators.vercel.app/', className: 'inline-flex items-center gap-2 rounded-full bg-[#ff2a2a] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#ff4a4a]' }
+    ]
+  },
+  {
+    number: '05',
+    badge: 'Simple Project',
+    title: 'WealthScape - Finance Predictor',
+    description: 'Wealthscape Finance Predictor is a financial forecasting web application that helps users estimate future wealth growth based on their financial inputs. It provides interactive charts and insights to simplify financial planning. The platform enables users to analyze investment outcomes and track progress toward their goals. Its intuitive interface makes personal finance management more accessible and data-driven.',
+    image: 'images/projects/project-5.svg',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
+    actions: [
+      { label: 'Code', href: 'https://github.com/satyarevanth666-debug/WEALTHSCAPE---Finance-Predictor', icon: true, className: 'inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white transition hover:bg-white hover:text-black' },
+      { label: 'Live Demo →', href: 'https://wealthscape-finance-predictor.vercel.app/', className: 'inline-flex items-center gap-2 rounded-full bg-[#ff2a2a] px-4 py-2 text-sm font-bold text-white transition hover:bg-[#ff4a4a]' }
+    ]
   }
 ];
 
