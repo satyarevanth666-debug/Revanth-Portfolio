@@ -15,7 +15,7 @@ const projects = [
   {
     number: '02',
     badge: '🚀 Featured Project',
-    title: 'Habit Tracker',
+    title: 'Habit Tracker - Track Your Daily Habits',
     description: 'Habit Tracker is a modern web application designed to help users to maintain productive daily habits.Users can create, update, and track multiple habits from a simple and intuitive dashboard.The application provides streak tracking and progress insights to maintain consistency.Its responsive design ensures a smooth experience across all devices.By visualizing daily achievements, it helps users stay motivated and achieve personal goals.',
     image: 'images/projects/project-2.svg',
     tags: ['HTML', 'CSS', 'JavaScript', 'React + Vite'],
