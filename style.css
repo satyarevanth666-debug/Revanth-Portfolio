@@ -108,3 +108,155 @@ body {
 #hamburger.active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+
+/* Projects grid and card enhancements */
+#projects-grid, #projects .projects-grid {
+  /* ensure rows match tallest card */
+  grid-auto-rows: 1fr;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+  border-radius: 1rem;
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: 0 10px 30px rgba(255,42,42,0.06);
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* Reduce excessive vertical spacing inside project cards */
+.project-card img {
+  display: block;
+  object-fit: cover;
+}
+
+/* Horizontal responsive row layout (desktop single-row) */
+#projects-grid, .projects-row {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  /* allow horizontal overflow if many items but we size cards to fit three */
+}
+
+/* Card sizing for desktop: 3 per row */
+@media (min-width: 1200px) {
+  .projects-row .project-card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    max-width: calc((100% - 48px) / 3);
+  }
+  .projects-row {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Tablet: 2 cards per row */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .projects-row .project-card {
+    flex: 0 0 calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+  }
+  .projects-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 767px) {
+  .projects-row .project-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .projects-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* Ensure cards don't overflow and keep compact padding */
+.projects-row .project-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+
+.projects-row { position: relative; }
+
+/* Carousel visuals */
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Make dragging smooth: hide text selection and use grab cursor */
+.carousel-viewport, .carousel-track, .carousel-track * {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.carousel-viewport { cursor: grab; }
+.carousel-viewport:active { cursor: grabbing; }
+
+.carousel-track {
+  display: flex;
+  align-items: stretch;
+  will-change: transform;
+  transition: transform 520ms cubic-bezier(.22,.9,.3,1);
+}
+
+.carousel-controls .carousel-btn {
+  position: relative;
+}
+
+.carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+.carousel-controls.left { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); z-index: 30; }
+.carousel-controls.right { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); z-index: 30; }
+
+.carousel-dots { display:flex; gap:8px; justify-content:center; margin-top:14px; }
+.carousel-dot { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.12); border: none; cursor:pointer; }
+.carousel-dot.active { background: var(--brand); box-shadow: 0 4px 12px rgba(255,42,42,0.18); }
+
+/* subtle indication more projects available */
+.carousel-viewport::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 64px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(5,7,11,0) 0%, rgba(5,7,11,0.6) 100%);
+}
+
+/* small adjustments for badges/buttons handled via utility classes */
