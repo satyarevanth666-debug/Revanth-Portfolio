@@ -8,7 +8,7 @@ document.getElementById('footer-container').innerHTML = `
       <p>Perpetual Learner.</p>
     </div>
     <div class="md:text-center flex flex-col gap-1">
-      <p>B.Tech CSE — Your University</p>
+      <p>B.Tech CSE — SRM University AP</p>
       <a href="#projects" class="underline underline-offset-4 hover:text-white mt-1">View Work</a>
     </div>
     <div class="md:text-right flex flex-col gap-1">
