@@ -29,7 +29,7 @@ const projects = [
     number: '03',
     badge: '🚀 Featured Project',
     title: 'Minesweeper Master - Interactive Puzzle Game',
-    description: 'Minesweeper Master is an interactive puzzle game that challenges players to uncover all safe tiles while avoiding hidden mines. It features multiple difficulty levels, statistics, a leaderboard, and a timer to track performance. Players use thinking to identify mine locations and clear the board safely. The game includes progress tracking for user experience and ensures smooth gameplay across both desktop and mobile devices with a responsive design.',
+    description: 'Minesweeper Master is an interactive puzzle game that challenges players to uncover all safe tiles while avoiding hidden mines. It features multiple difficulty levels, statistics, a leaderboard, and a timer to track performance. Players use thinking to identify mine locations and clear the board safely. The game includes progress tracking for user experience and ensures smooth gameplay across all the devices with a responsive design.',
     image: 'images/projects/project-3.svg',
     tags: ['HTML', 'CSS', 'JavaScript'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
