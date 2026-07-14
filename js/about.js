@@ -12,7 +12,7 @@ renderSection('about-container', `
         </div>
         <div class="aspect-[3/4] w-full overflow-hidden rounded-[18px] bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900">
           <img
-            src="images/about/photo.jpg"
+            src="images/about/profile.jpg"
             alt="Your photo"
             class="h-full w-full object-cover"
             onerror="this.onerror=null; this.src='images/projects/fallback.svg';"
