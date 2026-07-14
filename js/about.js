@@ -15,7 +15,7 @@ renderSection('about-container', `
             src="images/about/profile.jpg"
             alt="Your photo"
             class="h-full w-full object-cover"
-            onerror="this.onerror=null; this.src='images/projects/fallback.svg';"
+            onerror="this.onerror=null; this.src='images/projects/profile.jpg';"
           />
         </div>
         <div class="pb-1 pt-3 text-center">
