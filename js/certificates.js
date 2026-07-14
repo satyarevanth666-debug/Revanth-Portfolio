@@ -52,12 +52,166 @@ renderSection('certificates-container', `
       <div class="mb-6 inline-block rounded-full border border-white/15 bg-white/10 px-5 py-1.5 text-sm font-bold text-slate-200 backdrop-blur">Credentials</div>
       <h2 class="text-4xl font-black uppercase tracking-tight text-white md:text-5xl">Certificates</h2>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      ${certificatesMarkup}
+    <div class="overflow-hidden rounded-lg">
+      <div id="certs-grid" class="certs-row" tabindex="0">
+        <div class="carousel-controls left">
+          <button id="certs-prev" aria-label="Previous" class="carousel-btn">‹</button>
+        </div>
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            ${certificatesMarkup}
+          </div>
+        </div>
+        <div class="carousel-controls right">
+          <button id="certs-next" aria-label="Next" class="carousel-btn">›</button>
+        </div>
+        <div class="carousel-dots" id="certs-dots" aria-hidden="false"></div>
+      </div>
     </div>
   </div>
 </section>
 `);
+
+/* Certificates carousel (non-looping, swipe-enabled) */
+(() => {
+  const container = document.getElementById('certs-grid');
+  if (!container) return;
+  const viewport = container.querySelector('.carousel-viewport');
+  const track = container.querySelector('.carousel-track');
+  let slides = Array.from(track.querySelectorAll('.certificate-card'));
+  if (!slides.length) return;
+
+  const gap = 24;
+  const getVisible = () => {
+    const w = window.innerWidth;
+    if (w < 768) return 1;
+    if (w < 1200) return 2;
+    return 3;
+  };
+
+  let visible = getVisible();
+  let slideSize = 0;
+  let index = 0;
+  let isAnimating = false;
+  let isDragging = false;
+  let startX = 0;
+  let prevTranslate = 0;
+
+  const prevBtn = document.getElementById('certs-prev');
+  const nextBtn = document.getElementById('certs-next');
+  const dotsContainer = document.getElementById('certs-dots');
+
+  const setTranslate = (x, animate = true) => {
+    if (animate) track.style.transition = 'transform 520ms cubic-bezier(.22,.9,.3,1)';
+    else track.style.transition = 'none';
+    track.style.transform = `translateX(${x}px)`;
+  };
+
+  const resize = () => {
+    visible = getVisible();
+    const vpWidth = viewport.clientWidth;
+    const totalGap = gap * (visible - 1);
+    slideSize = Math.floor((vpWidth - totalGap) / visible);
+    slides = Array.from(track.querySelectorAll('.certificate-card'));
+    slides.forEach(s => {
+      s.style.flex = `0 0 ${slideSize}px`;
+      s.style.maxWidth = `${slideSize}px`;
+    });
+    track.style.gap = `${gap}px`;
+    const maxIndex = Math.max(0, slides.length - visible);
+    index = Math.min(index, maxIndex);
+    setTranslate(-index * (slideSize + gap), false);
+    buildDots();
+    updateActiveDot();
+    updateButtons();
+  };
+
+  const moveTo = (newIndex) => {
+    const maxIndex = Math.max(0, slides.length - visible);
+    const clamped = Math.max(0, Math.min(newIndex, maxIndex));
+    if (clamped === index || isAnimating) return;
+    index = clamped;
+    isAnimating = true;
+    setTranslate(-index * (slideSize + gap), true);
+    track.addEventListener('transitionend', () => { isAnimating = false; updateButtons(); updateActiveDot(); }, { once: true });
+  };
+
+  const prev = () => moveTo(index - 1);
+  const next = () => moveTo(index + 1);
+
+  const buildDots = () => {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+    const pages = Math.max(1, slides.length - visible + 1);
+    for (let i = 0; i < pages; i++) {
+      const d = document.createElement('button');
+      d.className = 'carousel-dot';
+      d.dataset.index = i;
+      d.addEventListener('click', () => moveTo(i));
+      dotsContainer.appendChild(d);
+    }
+  };
+
+  const updateActiveDot = () => {
+    if (!dotsContainer) return;
+    const dots = Array.from(dotsContainer.children);
+    const active = Math.min(index, Math.max(0, dots.length - 1));
+    dots.forEach((d, i) => d.classList.toggle('active', i === active));
+  };
+
+  const updateButtons = () => {
+    const maxIndex = Math.max(0, slides.length - visible);
+    if (prevBtn) prevBtn.disabled = index <= 0;
+    if (nextBtn) nextBtn.disabled = index >= maxIndex;
+    if (prevBtn) prevBtn.classList.toggle('disabled', index <= 0);
+    if (nextBtn) nextBtn.classList.toggle('disabled', index >= maxIndex);
+  };
+
+  // pointer drag
+  let activePointerId = null;
+  const onPointerDown = (e) => {
+    if (isAnimating) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    activePointerId = e.pointerId;
+    isDragging = true;
+    startX = e.clientX;
+    prevTranslate = -index * (slideSize + gap);
+    track.style.transition = 'none';
+    try { viewport.setPointerCapture(activePointerId); } catch (err) {}
+  };
+  const onPointerMove = (e) => {
+    if (!isDragging || e.pointerId !== activePointerId) return;
+    const clientX = e.clientX;
+    let delta = clientX - startX;
+    const maxIndex = Math.max(0, slides.length - visible);
+    if ((index === 0 && delta > 0) || (index === maxIndex && delta < 0)) delta *= 0.35;
+    const currentTranslate = prevTranslate + delta;
+    track.style.transform = `translateX(${currentTranslate}px)`;
+  };
+  const onPointerUp = (e) => {
+    if (!isDragging || e.pointerId !== activePointerId) return;
+    isDragging = false;
+    try { viewport.releasePointerCapture(activePointerId); } catch (err) {}
+    activePointerId = null;
+    const clientX = e.clientX || startX;
+    const delta = clientX - startX;
+    const threshold = slideSize / 4;
+    if (delta < -threshold) moveTo(index + 1);
+    else if (delta > threshold) moveTo(index - 1);
+    else setTranslate(-index * (slideSize + gap), true);
+  };
+
+  if (prevBtn) prevBtn.addEventListener('click', prev);
+  if (nextBtn) nextBtn.addEventListener('click', next);
+  viewport.addEventListener('pointerdown', onPointerDown);
+  viewport.addEventListener('pointermove', onPointerMove);
+  viewport.addEventListener('pointerup', onPointerUp);
+  viewport.addEventListener('pointercancel', onPointerUp);
+  container.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') prev(); if (e.key === 'ArrowRight') next(); });
+
+  resize();
+  window.addEventListener('resize', resize);
+})();
 
 // Certificate modal logic
 (() => {
