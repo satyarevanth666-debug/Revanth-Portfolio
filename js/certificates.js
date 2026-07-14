@@ -1,8 +1,7 @@
 const certificates = [
-  { icon: '🎓', title: 'Class XII — 81%', subtitle: 'Your Board' },
-  { icon: '🎓', title: 'Class X — 81%', subtitle: 'Your Board' },
-  { icon: '⛓️', title: 'Ethereum Developer', subtitle: 'Alchemy University' },
-  { icon: '💻', title: 'Full-Stack Web Dev', subtitle: 'freeCodeCamp' }
+  { icon: '🎓', title: 'Class XII — 98.4%', subtitle: 'Andhra Pradesh Board' },
+  { icon: '🎓', title: 'Class X — 96.83%', subtitle: 'Andhra Pradesh Board' },
+  { icon: '⛓️', title: 'CGPA - 9.74', subtitle: 'SRM University AP' }
 ];
 
 const certificatesMarkup = renderList(certificates, ({ icon, title, subtitle }) => `
