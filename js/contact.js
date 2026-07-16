@@ -17,7 +17,7 @@ document.getElementById('contact-container').innerHTML = `
       <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
         <p 
          class="max-w-sm text-sm text-white/70">For urgent inquiries, email <a href="mailto:satyarevanth666@gmail.com" class="font-semibold text-[#ff6b6b] underline-offset-4 transition hover:underline">satyarevanth666@gmail.com</a></p>
-        <p class="max-w-sm text-sm text-white/70">For urgent inquiries, phone <a href="tel:+918978972826" class="font-semibold text-[#ff6b6b] underline-offset-4 transition hover:underline">+91 89789 72826</a></p>
+        <p class="max-w-sm text-sm text-white/70">For urgent inquiries, phone <a href="tel:+918978972826" class="font-semibold text-[#ff6b6b] underline-offset-4 transition hover:underline">+918978972826</a></p>
         <button type="submit" class="group flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-7 py-3 font-bold text-white transition hover:bg-white/15 hover:shadow-[0_0_16px_rgba(255,255,255,0.08)]">
           Send Message
           <svg class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
