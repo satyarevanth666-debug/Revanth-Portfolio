@@ -4,7 +4,7 @@ const projects = [
     badge: '🚀 Featured Project',
     title: 'NewsOrbit - Global News Dashboard',
     description: 'NewsOrbit is a modern AI-powered news platform that delivers real-time headlines from around the world in one place. It features country-wise news coverage, trending stories, and intelligent AI-generated summaries for faster reading. Users can quickly explore the latest updates across multiple categories without information overload. NewsOrbit makes staying informed faster, smarter, and more engaging with real-time global news.',
-    image: 'images/projects/project-1.jpg',
+    image: 'images/projects/NewsOrbit.jpg',
     tags: ['HTML', 'CSS', 'JavaScript', 'MongoDB'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/40',
     actions: [
@@ -17,7 +17,7 @@ const projects = [
     badge: '🚀 Featured Project',
     title: 'Habit Tracker - Track Your Daily Habits',
     description: 'Habit Tracker is a modern web application designed to help users to maintain productive daily habits.Users can create, update, and track multiple habits from a simple and intuitive dashboard.The application provides streak tracking and progress insights to maintain consistency.Its responsive design ensures a smooth experience across all devices.By visualizing daily achievements, it helps users stay motivated and achieve personal goals.',
-    image: 'images/projects/project-2.jpg',
+    image: 'images/projects/Habit-Tracker.jpg',
     tags: ['HTML', 'CSS', 'JavaScript', 'React + Vite'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
     actions: [
@@ -30,7 +30,7 @@ const projects = [
     badge: '🚀 Featured Project',
     title: 'Minesweeper Master - Interactive Puzzle Game',
     description: 'Minesweeper Master is an interactive puzzle game that challenges players to uncover all safe tiles while avoiding hidden mines. It features multiple difficulty levels, statistics, a leaderboard, and a timer to track performance. Players use thinking to identify mine locations and clear the board safely. The game includes progress tracking for user experience and ensures smooth gameplay across all the devices with a responsive design.',
-    image: 'images/projects/project-3.jpg',
+    image: 'images/projects/Minesweeper.jpg',
     tags: ['HTML', 'CSS', 'JavaScript'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
     actions: [
@@ -43,7 +43,7 @@ const projects = [
     badge: 'Simple Project',
     title: 'CalciWorld - World of Calculators',
     description: 'CalciWorld is an all-in-one calculator website featuring 70+ calculators in one platform. It includes a wide range of tools for mathematics, finance, health, science, and unit conversions. The website provides quick, accurate, and reliable results with a clean and user-friendly interface. It is designed to help students, professionals, and everyday users solve problems easily. CalciWorld serves as a complete hub for all types of calculation needs.',
-    image: 'images/projects/project-4.jpg',
+    image: 'images/projects/CalciWorld.jpg',
     tags: ['HTML', 'CSS', 'JavaScript'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
     actions: [
@@ -56,7 +56,7 @@ const projects = [
     badge: 'Simple Project',
     title: 'WealthScape - Finance Predictor',
     description: 'Wealthscape Finance Predictor is a financial forecasting web application that helps users estimate future wealth growth based on their financial inputs. It provides interactive charts and insights to simplify financial planning. The platform enables users to analyze investment outcomes and track progress toward their goals. Its intuitive interface makes personal finance management more accessible and data-driven.',
-    image: 'images/projects/project-5.jpg',
+    image: 'images/projects/WealthScape.jpg',
     tags: ['HTML', 'CSS', 'JavaScript'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
     actions: [
