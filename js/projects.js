@@ -56,7 +56,7 @@ const projects = [
     badge: 'Simple Project',
     title: 'WealthScape - Finance Predictor',
     description: 'Wealthscape Finance Predictor is a financial forecasting web application that helps users estimate future wealth growth based on their financial inputs. It provides interactive charts and insights to simplify financial planning. The platform enables users to analyze investment outcomes and track progress toward their goals. Its intuitive interface makes personal finance management more accessible and data-driven.',
-    image: 'images/projects/WealthScape.jpg',
+    image: 'images/projects/Wealthscape.jpg',
     tags: ['HTML', 'CSS', 'JavaScript'],
     articleClass: 'project-card group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0a0a] text-white shadow-[0_12px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ff2a2a]/30',
     actions: [
